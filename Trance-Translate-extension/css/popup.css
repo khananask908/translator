@@ -1,0 +1,102 @@
+/* @font-face {
+   font-family: FontAwesome;
+   src: url("/font/fontawesome-webfont.woff?v=4.7.0")format("woff");
+   font-weight: normal;
+   font-style: normal
+}
+.fa {
+   display: inline-block;
+   font: normal normal normal 14px/1 FontAwesome;
+   text-rendering: auto;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+} */
+
+body {
+   min-width: 480px;
+   /* background-color: #ECEFF4; */
+}
+
+.container {
+   padding: 10px;
+}
+
+.container>.container {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   grid-template-columns: 1fr auto;
+   /* grid-gap: 10px;
+   grid-auto-rows: 100px; */
+   grid-template-areas: "left right";
+   /* align-items: start; */
+   padding: 8px 0;
+}
+
+.container>.container>.item:nth-child(1) {
+   grid-area: left;
+}
+
+.container>.container>.item:nth-child(2) {
+   grid-area: right;
+}
+
+textarea {
+   max-height: 150px;
+   min-height: 30px;
+   resize: vertical;
+}
+
+textarea.translated-out {
+   background-color: #f5f5f5;
+   max-height: 250px;
+}
+
+.playVoice {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   width: 18px;
+   height: 18px;
+   text-decoration: none;
+   overflow: hidden;
+   padding: unset;
+   padding-left: 5px;
+   margin: 1px;
+   margin-bottom: 2px;
+   outline: none;
+   color: #000;
+   /* color: #666; */
+   opacity: 0.6;
+   transition: all .2s ease;
+}
+
+.playVoice:hover {
+   /* color: #000; */
+   opacity: 1;
+}
+
+.playVoice:active {
+   outline: 1px solid #cacaca;
+}
+
+.playVoice>* {
+   font-size: 1.4em !important;
+}
+
+button {
+   max-height: 25px;
+}
+
+img[class|="icon"] {
+   width: 1em;
+   height: 1em;
+   stroke-width: 0;
+   stroke: currentColor;
+   fill: currentColor;
+}
+
+button>img[class|="icon"] {
+   width: 1.1em;
+   height: 1.1em;
+   opacity: 0.8;
+}
